@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks> netcoreapp2.1; netcoreapp3.1; net45; net451; net452; net462; net472</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>GraphQL Extensions to provide Pagination and Search Input types for GraphQL schema.</Description>
+    <Authors>Nav Malik</Authors>
+    <Copyright>Nav Malik</Copyright>
+    <PackageTags>GraphQL GraphQL.Filters GraphQL.Pagination</PackageTags>
+    <PackageReleaseNotes>Pagination and Search Input types.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>
