@@ -9,7 +9,13 @@
     <Authors>Nav Malik</Authors>
     <Copyright>Nav Malik</Copyright>
     <PackageTags>GraphQL GraphQL.Filters GraphQL.Pagination</PackageTags>
-    <PackageReleaseNotes>Pagination and Search Input types.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added notstartswith, notendswith, containsinlist, notcontainsinlist,
+ startswithinlist,
+ endswithinlist, notstartswithinlist, notendswithinlist in FilterOperationEnum. These will only be applicable to Strings fields
+This will allow to use contains, startsWith, and endsWith in list and will translate into as many contains, startswith and/or endswith expressions as many values in the list.
+E.g. if Not Contains In List is used then the values will be AND together, for exmaple (NOT (fieldName LIKE %value1%) AND (NOT (fieldName LIKE %value2%))). It will be similiar for startwith and endswith
+E.g. if Contains In List is used then the values will be OR together, for example (fieldName LIKE %value1%) OR (fieldName LIKE %value2%). It will be similiar for startswith and endswith</PackageReleaseNotes>
+    <Version>1.0.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
