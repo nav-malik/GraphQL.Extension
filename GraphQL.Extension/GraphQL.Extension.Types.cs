@@ -4,20 +4,42 @@ using GraphQL.Extension.Base.Pagination;
 
 namespace GraphQL.Extension.Types.Filter
 {
-    public class FilterOperationEnumType : EnumerationGraphType<FilterOperationEnum>
+    public class FilterOperationEnumType : EnumerationGraphType
     {
         public FilterOperationEnumType()
         {
             Name = "FilterOperation";
             Description = "";
+            Add("gte", "gte");
+            Add("gt", "gt");
+            Add("eq", "eq");
+            Add("neq", "neq");
+            Add("lt", "lt");
+            Add("lte", "lte");
+            Add("contains", "contains");
+            Add("notcontains", "notcontains");
+            Add("startswith", "startswith");
+            Add("endswith", "endswith");
+            Add("inlist", "inlist");
+            Add("notinlist", "notinlist");
+            Add("notstartswith", "notstartswith");
+            Add("notendswith", "notendswith");
+            Add("containsinlist", "containsinlist");
+            Add("notcontainsinlist", "notcontainsinlist");
+            Add("startswithinlist", "startswithinlist");
+            Add("endswithinlist", "endswithinlist");
+            Add("notstartswithinlist", "notstartswithinlist");
+            Add("notendswithinlist", "notendswithinlist");
         }
     }
-    public class FilterLogicEnumType : EnumerationGraphType<FilterLogicEnum>
+    public class FilterLogicEnumType : EnumerationGraphType
     {
         public FilterLogicEnumType()
         {
             Name = "FilterLogic";
             Description = "Logic can be one of 'and', 'or'";
+            Add("and", "and");
+            Add("or", "or");
         }
     }    
     public class FilterInputType : InputObjectGraphType<FilterInput>
@@ -61,12 +83,14 @@ namespace GraphQL.Extension.Types.Pagination
             Field<SortDirectionEnumType>("direction");
         }
     }
-    public class SortDirectionEnumType : EnumerationGraphType<SortDirectionEnum>
+    public class SortDirectionEnumType : EnumerationGraphType
     {
         public SortDirectionEnumType()
         {
             Name = "sortDirection";
             Description = "";
+            Add("asc", "asc");
+            Add("desc", "desc");
         }
     }
 }
