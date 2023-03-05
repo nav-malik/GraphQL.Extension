@@ -53,12 +53,23 @@ namespace GraphQL.Extension.Types.Filter
             Field<StringGraphType>("fieldName");
         }
     }
+
+    public class FilterGroupInputType : InputObjectGraphType<FilterGroupInput>
+    {
+        public FilterGroupInputType()
+        {
+            Name = "FilterGroupInput";
+            Field<NonNullGraphType<FilterLogicEnumType>>("logic");
+            Field<NonNullGraphType<ListGraphType<NonNullGraphType<FilterInputType>>>>("filters");
+        }
+    }
     public class SearchInputType : InputObjectGraphType<SearchInput>
     {
         public SearchInputType()
         {
             Name = "SearchInput";
-            Field<NonNullGraphType<ListGraphType<NonNullGraphType<FilterInputType>>>>("filters");
+            //Field<NonNullGraphType<ListGraphType<NonNullGraphType<FilterInputType>>>>("filters");
+            Field<NonNullGraphType<ListGraphType<NonNullGraphType<FilterGroupInputType>>>>("filterGroups");
         }
     }    
 }
