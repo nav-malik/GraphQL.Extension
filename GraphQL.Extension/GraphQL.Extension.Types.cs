@@ -60,7 +60,8 @@ namespace GraphQL.Extension.Types.Filter
         {
             Name = "FilterGroupInput";
             Field<NonNullGraphType<FilterLogicEnumType>>("logic");
-            Field<NonNullGraphType<ListGraphType<NonNullGraphType<FilterInputType>>>>("filters");
+            Field<ListGraphType<NonNullGraphType<FilterGroupInputType>>>("childGroups");
+            Field<ListGraphType<NonNullGraphType<FilterInputType>>>("filters");
         }
     }
     public class SearchInputType : InputObjectGraphType<SearchInput>
