@@ -1,6 +1,10 @@
 using GraphQL.Types;
 using GraphQL.Extension.Base.Filter;
 using GraphQL.Extension.Base.Pagination;
+using GraphQL.Extension.Base.Unique;
+using GraphQL.Extension.Types.Filter;
+using GraphQL.Extension.Types.Pagination;
+using GraphQL.Extension.Base.Grouping;
 
 namespace GraphQL.Extension.Types.Filter
 {
@@ -103,6 +107,50 @@ namespace GraphQL.Extension.Types.Pagination
             Description = "";
             Add("asc", "asc");
             Add("desc", "desc");
+        }
+    }
+}
+
+namespace GraphQL.Extension.Types.Unique
+{
+    public class DistinctByInputType : InputObjectGraphType<DistinctByInput>
+    {
+        public DistinctByInputType()
+        {
+            Name = "DistinctByInput";
+
+            Field<NonNullGraphType<StringGraphType>>("fieldNames");
+            Field<SearchInputType>("search");
+            Field<PaginationInputType>("pagination");
+        }
+    }
+}
+
+namespace GraphQL.Extension.Types.Grouping
+{
+    public class GroupByInputType : InputObjectGraphType<GroupByInput>
+    {
+        public GroupByInputType()
+        {
+            Name = "GroupByInput";
+
+            Field<NonNullGraphType<StringGraphType>>("fieldNames");
+            Field<SearchInputType>("search");
+        }
+    }
+}
+
+namespace GraphQL.Extension.Types.Mutation
+{
+    public class MutationOperationEnumType : EnumerationGraphType
+    {
+        public MutationOperationEnumType()
+        {
+            base.Name = "MutationOperation";
+            Description = "";
+            Add("add", "add");
+            Add("update", "update");
+            Add("delete", "delete");
         }
     }
 }
