@@ -157,7 +157,7 @@ namespace GraphQL.Extension.Types.Grouping
     {
         public GroupValuePairType()
         {
-            Name = nameof(GroupByInputType);
+            Name = nameof(GroupValuePairType);
 
             Field<ListGraphType<GroupKeyNameValueType>>("keys");
             Field<IntGraphType>("value");
@@ -168,7 +168,7 @@ namespace GraphQL.Extension.Types.Grouping
     {
         public GroupKeyNameValueType()
         {
-            Name = nameof(GroupByInputType);
+            Name = nameof(GroupKeyNameValueType);
 
             Field<StringGraphType>("keyName");
             Field<StringGraphType>("keyValue");

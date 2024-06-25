@@ -9,14 +9,15 @@
     <Authors>Nav Malik</Authors>
     <Copyright>Nav Malik</Copyright>
     <PackageTags>GraphQL GraphQL.Filters GraphQL.Pagination</PackageTags>
-    <PackageReleaseNotes>3.3.0 Added GroupByOperationOn graph types.
+    <PackageReleaseNotes>3.3.0.1 Minor fixes.
+3.3.0 Added GroupByOperationOn graph types.
 3.2.0
 Added DistinctBy, GroupBy and MutationOperationEnum Input types.
 3.1.0
 Major change. 
 Added Filter Groups. This allow to create SQL queries with 'Parenthesis' () and separate And/Or groups with () in SQL.
 </PackageReleaseNotes>
-    <Version>3.3.0</Version>
+    <Version>3.3.0.1</Version>
     <RepositoryUrl>https://github.com/nav-malik/GraphQL.Extension</RepositoryUrl>
     <PackageProjectUrl>https://github.com/nav-malik/GraphQL.Extension</PackageProjectUrl>
     <Title>GraphQL.Extension</Title>
