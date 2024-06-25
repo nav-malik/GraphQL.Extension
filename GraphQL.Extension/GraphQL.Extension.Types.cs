@@ -138,6 +138,55 @@ namespace GraphQL.Extension.Types.Grouping
             Field<SearchInputType>("search");
         }
     }
+
+    public class GroupByOperationOnInputType : InputObjectGraphType
+    {
+        public GroupByOperationOnInputType()
+        {
+            Name = "GroupByOperationOnInput";
+
+            Field<NonNullGraphType<StringGraphType>>("groupByFieldNames");
+            Field<NonNullGraphType<StringGraphType>>("operationOnFieldName");
+            Field<NonNullGraphType<GroupByOperationEnumType>>("operation");
+            Field<SearchInputType>("search");
+            Field<PaginationInputType>("pagination");
+        }
+    }
+
+    public class GroupValuePairType : ObjectGraphType
+    {
+        public GroupValuePairType()
+        {
+            Name = nameof(GroupByInputType);
+
+            Field<ListGraphType<GroupKeyNameValueType>>("keys");
+            Field<IntGraphType>("value");
+        }
+    }
+
+    public class GroupKeyNameValueType : ObjectGraphType
+    {
+        public GroupKeyNameValueType()
+        {
+            Name = nameof(GroupByInputType);
+
+            Field<StringGraphType>("keyName");
+            Field<StringGraphType>("keyValue");
+        }
+    }
+
+    public class GroupByOperationEnumType : EnumerationGraphType
+    {
+        public GroupByOperationEnumType()
+        {
+            base.Name = "GroupByOperationEnum";
+            base.Description = "";
+            Add("sum", "sum");
+            Add("count", "count");
+            Add("max", "max");
+            Add("min", "min");
+        }
+    }
 }
 
 namespace GraphQL.Extension.Types.Mutation
