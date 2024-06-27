@@ -55,6 +55,7 @@ namespace GraphQL.Extension.Types.Filter
             Field<NonNullGraphType<FilterLogicEnumType>>("logic");
             Field<StringGraphType>("value");
             Field<StringGraphType>("fieldName");
+            Field<StringGraphType>("delimiterListOfValues");
         }
     }
 
@@ -113,13 +114,15 @@ namespace GraphQL.Extension.Types.Pagination
 
 namespace GraphQL.Extension.Types.Unique
 {
-    public class DistinctByInputType : InputObjectGraphType<DistinctByInput>
+    public class DistinctByInputType : InputObjectGraphType//<DistinctByInput>
     {
         public DistinctByInputType()
         {
             Name = "DistinctByInput";
 
             Field<NonNullGraphType<StringGraphType>>("fieldNames");
+            Field<StringGraphType>("delimiterFieldNames");
+            Field<StringGraphType>("delimiterFieldValues");
             Field<SearchInputType>("search");
             Field<PaginationInputType>("pagination");
         }
@@ -128,13 +131,14 @@ namespace GraphQL.Extension.Types.Unique
 
 namespace GraphQL.Extension.Types.Grouping
 {
-    public class GroupByInputType : InputObjectGraphType<GroupByInput>
+    public class GroupByInputType : InputObjectGraphType//<GroupByInput>
     {
         public GroupByInputType()
         {
             Name = "GroupByInput";
 
             Field<NonNullGraphType<StringGraphType>>("fieldNames");
+            Field<StringGraphType>("delimiterFieldNames");
             Field<SearchInputType>("search");
         }
     }
@@ -147,6 +151,8 @@ namespace GraphQL.Extension.Types.Grouping
 
             Field<NonNullGraphType<StringGraphType>>("groupByFieldNames");
             Field<NonNullGraphType<StringGraphType>>("operationOnFieldName");
+            Field<StringGraphType>("delimiterFieldNames");
+            Field<StringGraphType>("delimiterFieldValues");
             Field<NonNullGraphType<GroupByOperationEnumType>>("operation");
             Field<SearchInputType>("search");
             Field<PaginationInputType>("pagination");
