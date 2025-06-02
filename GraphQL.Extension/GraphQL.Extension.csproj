@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+	  <TargetFrameworks>net6.0; net8.0; net48; </TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -9,13 +9,18 @@
     <Authors>Nav Malik</Authors>
     <Copyright>Nav Malik</Copyright>
     <PackageTags>GraphQL GraphQL.Filters GraphQL.Pagination</PackageTags>
-    <PackageReleaseNotes>3.4.0 Added delimiter for in FinterInputType for list type operation values. Also, added delimiter for Field Names and Field Values in DistinctByInputType, GroupByInputType and GroupByOperationOnInputType  so we can pass more than one character for delimiter, this is particularly helpful in field values as comma (,) can be in the values it self.
+    <PackageReleaseNotes>3.5.0 Addes support for Net6.0, Net8.0 and Framework4.8
 </PackageReleaseNotes>
-    <Version>3.4.0</Version>
+    <Version>3.5.0</Version>
     <RepositoryUrl>https://github.com/nav-malik/GraphQL.Extension</RepositoryUrl>
     <PackageProjectUrl>https://github.com/nav-malik/GraphQL.Extension</PackageProjectUrl>
     <Title>GraphQL.Extension</Title>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="GraphQL" Version="7.2.2" />
