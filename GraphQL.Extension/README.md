@@ -1,5 +1,7 @@
 GraphQL Extensions to provide Pagination, Search, DistinctBy, GroupBy and MutationOperationEnum Input types for GraphQL schema.
 
+4.0.0 Updated Enums to match with GraphQL.Net version 8.x
+
 3.5.0 Addes support for Net6.0, Net8.0 and Framework4.8
 
 3.4.0 Added delimiter for in FinterInputType for list type operation values. Also, added delimiter for Field Names and Field Values in DistinctByInputType, GroupByInputType and GroupByOperationOnInputType so we can pass more than one character for delimiter, this is particularly helpful in field values as comma (,) can be in the values it self.

@@ -5,45 +5,46 @@ using GraphQL.Extension.Base.Unique;
 using GraphQL.Extension.Types.Filter;
 using GraphQL.Extension.Types.Pagination;
 using GraphQL.Extension.Base.Grouping;
+using GraphQL.Extension.Base.Mutation;
 
 namespace GraphQL.Extension.Types.Filter
 {
-    public class FilterOperationEnumType : EnumerationGraphType
+    public class FilterOperationEnumType : EnumerationGraphType<FilterOperationEnum>
     {
         public FilterOperationEnumType()
         {
             Name = "FilterOperation";
             Description = "";
-            Add("gte", "gte");
-            Add("gt", "gt");
-            Add("eq", "eq");
-            Add("neq", "neq");
-            Add("lt", "lt");
-            Add("lte", "lte");
-            Add("contains", "contains");
-            Add("notcontains", "notcontains");
-            Add("startswith", "startswith");
-            Add("endswith", "endswith");
-            Add("inlist", "inlist");
-            Add("notinlist", "notinlist");
-            Add("notstartswith", "notstartswith");
-            Add("notendswith", "notendswith");
-            Add("containsinlist", "containsinlist");
-            Add("notcontainsinlist", "notcontainsinlist");
-            Add("startswithinlist", "startswithinlist");
-            Add("endswithinlist", "endswithinlist");
-            Add("notstartswithinlist", "notstartswithinlist");
-            Add("notendswithinlist", "notendswithinlist");
+            //Add("gte", "gte");
+            //Add("gt", "gt");
+            //Add("eq", "eq");
+            //Add("neq", "neq");
+            //Add("lt", "lt");
+            //Add("lte", "lte");
+            //Add("contains", "contains");
+            //Add("notcontains", "notcontains");
+            //Add("startswith", "startswith");
+            //Add("endswith", "endswith");
+            //Add("inlist", "inlist");
+            //Add("notinlist", "notinlist");
+            //Add("notstartswith", "notstartswith");
+            //Add("notendswith", "notendswith");
+            //Add("containsinlist", "containsinlist");
+            //Add("notcontainsinlist", "notcontainsinlist");
+            //Add("startswithinlist", "startswithinlist");
+            //Add("endswithinlist", "endswithinlist");
+            //Add("notstartswithinlist", "notstartswithinlist");
+            //Add("notendswithinlist", "notendswithinlist");
         }
     }
-    public class FilterLogicEnumType : EnumerationGraphType
+    public class FilterLogicEnumType : EnumerationGraphType<FilterLogicEnum>
     {
         public FilterLogicEnumType()
         {
             Name = "FilterLogic";
             Description = "Logic can be one of 'and', 'or'";
-            Add("and", "and");
-            Add("or", "or");
+            //Add("and", "and");
+            //Add("or", "or");
         }
     }    
     public class FilterInputType : InputObjectGraphType<FilterInput>
@@ -100,14 +101,14 @@ namespace GraphQL.Extension.Types.Pagination
             Field<SortDirectionEnumType>("direction");
         }
     }
-    public class SortDirectionEnumType : EnumerationGraphType
+    public class SortDirectionEnumType : EnumerationGraphType<SortDirectionEnum>
     {
         public SortDirectionEnumType()
         {
             Name = "sortDirection";
             Description = "";
-            Add("asc", "asc");
-            Add("desc", "desc");
+            //Add("asc", "asc");
+            //Add("desc", "desc");
         }
     }
 }
@@ -181,31 +182,31 @@ namespace GraphQL.Extension.Types.Grouping
         }
     }
 
-    public class GroupByOperationEnumType : EnumerationGraphType
+    public class GroupByOperationEnumType : EnumerationGraphType<GroupByOperationEnum>
     {
         public GroupByOperationEnumType()
         {
             base.Name = "GroupByOperationEnum";
             base.Description = "";
-            Add("sum", "sum");
-            Add("count", "count");
-            Add("max", "max");
-            Add("min", "min");
+            //Add("sum", "sum");
+            //Add("count", "count");
+            //Add("max", "max");
+            //Add("min", "min");
         }
     }
 }
 
 namespace GraphQL.Extension.Types.Mutation
 {
-    public class MutationOperationEnumType : EnumerationGraphType
+    public class MutationOperationEnumType : EnumerationGraphType<MutationOperationEnum>
     {
         public MutationOperationEnumType()
         {
             base.Name = "MutationOperation";
             Description = "";
-            Add("add", "add");
-            Add("update", "update");
-            Add("delete", "delete");
+            //Add("add", "add");
+            //Add("update", "update");
+            //Add("delete", "delete");
         }
     }
 }

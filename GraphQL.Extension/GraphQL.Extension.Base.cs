@@ -29,31 +29,31 @@ namespace GraphQL.Extension.Base.Filter
     }
     public enum FilterOperationEnum
     {
-        gte,
-        gt,
-        eq,
-        neq,
-        lt,
-        lte,
-        contains,
-        notcontains,
-        startswith,
-        endswith,
-        inlist,
-        notinlist,
-        notstartswith,
-        notendswith,
-        containsinlist,
-        notcontainsinlist,
-        startswithinlist,
-        endswithinlist,
-        notstartswithinlist,
-        notendswithinlist
+        GTE,
+        GT,
+        EQ,
+        NEQ,
+        LT,
+        LTE,
+        CONTAINS,
+        NOTCONTAINS,
+        STARTSWITH,
+        ENDSWITH,
+        INLIST,
+        NOTINLIST,
+        NOTSTARTSWITH,
+        NOTENDSWITH,
+        CONTAINSINLIST,
+        NOTCONTAINSINLIST,
+        STARTSWITHINLIST,
+        ENDSWITHINLIST,
+        NOTSTARTSWITHINLIST,
+        NOTENDSWITHINLIST
     }
     public enum FilterLogicEnum
     {
-        and,
-        or
+        AND,
+        OR
     }
 }
 
@@ -74,8 +74,8 @@ namespace GraphQL.Extension.Base.Pagination
 
     public enum SortDirectionEnum
     {
-        asc,
-        desc
+        ASC,
+        DESC
     }
 }
 
@@ -114,14 +114,22 @@ namespace GraphQL.Extension.Base.Grouping
         /// </summary>
         public SearchInput Search { get; set; }
     }
+
+    public enum GroupByOperationEnum
+    {
+        SUM,
+        COUNT,        
+        MAX,
+        MIN
+    }
 }
 
 namespace GraphQL.Extension.Base.Mutation
 {
     public enum MutationOperationEnum
     {
-        add,
-        update,
-        delete
+        ADD,
+        UPDATE,
+        DELETE
     }
 }
