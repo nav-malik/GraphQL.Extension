@@ -1,5 +1,8 @@
 GraphQL Extensions to provide Pagination, Search, DistinctBy, GroupBy and MutationOperationEnum Input types for GraphQL schema.
 
+4.5.0 Added GroupByAggregation, that will allow to perfom Count Distinct, Count, Sum, Min, and Max on a field other than in GroupBy field name list.
+Also, update the GroupByInput and DistinctByInput, instead of passing field names as delimated string now field names will be List of strings. 
+
 4.0.0 Updated Enums to match with GraphQL.Net version 8.x
 
 3.5.0 Addes support for Net6.0, Net8.0 and Framework4.8

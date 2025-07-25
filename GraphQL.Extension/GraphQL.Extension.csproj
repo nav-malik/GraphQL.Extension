@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFrameworks>net6.0; net8.0; net48; </TargetFrameworks>
+	  <TargetFrameworks>net8.0; net9.0; net48; </TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -9,13 +9,21 @@
     <Authors>Nav Malik</Authors>
     <Copyright>Nav Malik</Copyright>
     <PackageTags>GraphQL GraphQL.Filters GraphQL.Pagination GraphQL.DistinctBy</PackageTags>
-    <PackageReleaseNotes>4.0.0 Updated Enums to match with GraphQL.Net version 8.x
-</PackageReleaseNotes>
-    <Version>4.0.0</Version>
+    <PackageReleaseNotes>4.5.0 Added GroupByAggregation, that will allow to perfom Count Distinct, Count, Sum, Min, and Max on a field other than in GroupBy field name list.
+Also, update the GroupByInput and DistinctByInput, instead of passing field names as delimated string now field names will be List of strings.</PackageReleaseNotes>
+    <Version>4.5.0.1</Version>
     <RepositoryUrl>https://github.com/nav-malik/GraphQL.Extension</RepositoryUrl>
     <PackageProjectUrl>https://github.com/nav-malik/GraphQL.Extension</PackageProjectUrl>
     <Title>GraphQL.Extension</Title>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net9.0|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
   </PropertyGroup>
 
 	<ItemGroup>
