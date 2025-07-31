@@ -196,7 +196,7 @@ namespace GraphQL.Extension.Types.Grouping
 
 namespace GraphQL.Extension.Types.Aggregation
 {
-    public class GroupByAggregationInputType : InputObjectGraphType<GroupByAggregationInput>, IInputObjectGraphType
+    public class GroupByAggregationInputType : InputObjectGraphType<GroupByAggregationInput>
     {
         public GroupByAggregationInputType()
         {
@@ -207,7 +207,7 @@ namespace GraphQL.Extension.Types.Aggregation
             Field<NonNullGraphType<ListGraphType<StringGraphType>>>("groupByFieldNames");
             Field<NonNullGraphType<StringGraphType>>("aggregationFieldName");
             Field<NonNullGraphType<StringGraphType>>("aggregationResultFieldName");
-            Field<NonNullGraphType<AggregationOperationEnumType>>("aggregationOperation");
+            Field<AggregationOperationEnumType>("aggregationOperation");
             Field<SearchInputType>("search");
         }
         
@@ -217,8 +217,8 @@ namespace GraphQL.Extension.Types.Aggregation
     {
         public AggregationOperationEnumType()
         {
-            base.Name = "GroupByOperationEnum";
-            base.Description = "";
+            base.Name = "AggregationOperation";
+            base.Description = "AggregationOperation can be COUNTDISTINCT, COUNT, SUM, MIN AND MAX, default is COUNTDISTINCT.";
         }
     }
 }

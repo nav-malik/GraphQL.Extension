@@ -9,10 +9,10 @@
     <Authors>Nav Malik</Authors>
     <Copyright>Nav Malik</Copyright>
     <PackageTags>GraphQL GraphQL.Filters GraphQL.Pagination GraphQL.DistinctBy</PackageTags>
-    <PackageReleaseNotes>4.6.1 Updated GroupByAggregationInputType base type from ObjectGraphType to InputObjectGraphType and addded IInputObjectGraphType in base. This type is not nullable so it's needed IInputObjectGraphType as well.
-
+    <PackageReleaseNotes>4.6.5 Updated GroupByAggregationInputType base type removed IInputObjectGraphType. Also, removed NonNullable from AggregationOperation enum.
+4.6.1 Updated GroupByAggregationInputType base type from ObjectGraphType to InputObjectGraphType and addded IInputObjectGraphType in base. This type is not nullable so it's needed IInputObjectGraphType as well.
 4.6.0 Updated GroupByAggregationInputType base type from ObjectGraphType to InputObjectGraphType</PackageReleaseNotes>
-    <Version>4.6.1</Version>
+    <Version>4.6.5</Version>
     <RepositoryUrl>https://github.com/nav-malik/GraphQL.Extension</RepositoryUrl>
     <PackageProjectUrl>https://github.com/nav-malik/GraphQL.Extension</PackageProjectUrl>
     <Title>GraphQL.Extension</Title>
