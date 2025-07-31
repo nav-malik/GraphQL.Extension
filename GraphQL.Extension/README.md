@@ -1,6 +1,6 @@
 GraphQL Extensions to provide Pagination, Search, DistinctBy, GroupBy and MutationOperationEnum Input types for GraphQL schema.
 
-4.6.0.1 Updated GroupByAggregationInputType base type from ObjectGraphType to InputObjectGraphType and addded IInputObjectGraphType in base.
+4.6.1 Updated GroupByAggregationInputType base type from ObjectGraphType to InputObjectGraphType and addded IInputObjectGraphType in base.
 This type is not nullable so it's needed IInputObjectGraphType as well.
 
 4.6.0 Updated GroupByAggregationInputType base type from ObjectGraphType to InputObjectGraphType
