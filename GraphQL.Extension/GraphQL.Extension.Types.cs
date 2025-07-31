@@ -196,7 +196,7 @@ namespace GraphQL.Extension.Types.Grouping
 
 namespace GraphQL.Extension.Types.Aggregation
 {
-    public class GroupByAggregationInputType : InputObjectGraphType<GroupByAggregationInput>
+    public class GroupByAggregationInputType : InputObjectGraphType<GroupByAggregationInput>, IInputObjectGraphType
     {
         public GroupByAggregationInputType()
         {
